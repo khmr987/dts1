@@ -1,2 +1,21 @@
-Database 1
-Dts1
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Calculator</title>
+  <script src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+  <input type="number" id="num1">
+  <input type="number" id="num2">
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <py-script>
+    def calculate():
+      num1 = int(Element('num1').element.value)
+      num2 = int(Element('num2').element.value)
+      result = num1 + num2
+      Element('result').element.innerText = f"Result: {result}"
+  </py-script>
+</body>
+</html>
